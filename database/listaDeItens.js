@@ -1,7 +1,7 @@
 const items = [
-    {nome: "Almofada ", escolhido: true},
-    {nome: "Assadeira de bolo oval ", escolhido: true},
-    {nome: "Assadeira de bolo retangular", escolhido: true},
+    {nome: "Almofada ", escolhido: false},
+    {nome: "Assadeira de bolo oval ", escolhido: false},
+    {nome: "Assadeira de bolo retangular", escolhido: false},
     {nome: "Batedeira 220v", escolhido: false},
     {nome: "Bule de café ", escolhido: false},
     {nome: "Caixa organizadora grande", escolhido: false},
