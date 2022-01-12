@@ -22,8 +22,16 @@ app.use((req, res, next)=>{
 app.use(express.json({extended: true}));
 
 
+app.get("/admin3325", (req, res)=>{
+    Item.findAll({ where: {escolhido: true}}).then((items => {
+        res.send(items)
+    }))
+})
+
 app.post("/escolhido", (req, res)=> {
-    res.send("item escolhido")
+    Item.update({escolhido: true}, {where: {id: `${req.body.item.id}`}})
+    console.log(req.body)
+
 });
 
 app.get("/reload", (req, res)=> {
