@@ -1,6 +1,7 @@
 const express = require("express");
 const { waitForDebugger } = require("inspector");
 const app = express();
+const port = process.env.PORT || 8081
 const connection = require("./database/connection");
 const Item = require("./database/Item");
 const cors = require("cors")
@@ -53,6 +54,6 @@ app.get("/", (req, res) => {
 });
 
 
-app.listen(8081, (error) => {
+app.listen(port, (error) => {
     console.log("servidor online")
 });
